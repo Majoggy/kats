@@ -6,11 +6,14 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist",
-    "incremental": true,
+    "rootDir": "./src",
     "skipLibCheck": true,
     "strict": true
-  }
+  },
+  "include": ["src"]
 }

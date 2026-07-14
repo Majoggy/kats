@@ -711,6 +711,12 @@
         "breed": "Somali",
         "pouchSize": "F"
       },
+            {
+        "name": "Rozella",
+        "subscriptionActive": true,
+        "breed": "LaPerm",
+        "pouchSize": "F"
+      },
       {
         "name": "Eldridge",
         "subscriptionActive": false,
