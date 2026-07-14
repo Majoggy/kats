@@ -12,7 +12,6 @@ import {
   MobileImage,
   Price,
   Title,
-  Wrapper,
 } from "./styled";
 
 type Props = {
@@ -30,29 +29,29 @@ export function WelcomeCard({
   totalPrice,
   freeGift,
 }: Props) {
-  return (
-    <Wrapper>
-      <CardWrapper>
-        <MobileImage src={CAT_IMAGE_URL} alt="A cat" />
-        <Card>
-          <DesktopImage src={CAT_IMAGE_URL} alt="A cat" />
-          <Content>
-            <Title>{title}</Title>
-            <Message>{message}</Message>
-            <Price>Total price: £{totalPrice.toFixed(2)}</Price>
-            <Actions>
-              <Button $variant="primary">
-                See details
-              </Button>
-              <Button $variant="secondary">
-                Edit delivery
-              </Button>
-            </Actions>
-          </Content>
-        </Card>
+  
+  const TOTAL_PRICE = `£${totalPrice.toFixed(2)}`;
 
-        {freeGift && <FreeGiftBadge>Free gift</FreeGiftBadge>}
-      </CardWrapper>
-    </Wrapper>
+  return (
+    <CardWrapper>
+      <MobileImage src={CAT_IMAGE_URL} alt="A cat" />
+      <Card>
+        <DesktopImage src={CAT_IMAGE_URL} alt="A cat" />
+        <Content>
+          <Title>{title}</Title>
+          <Message>{message}</Message>
+          <Price>Total price: {TOTAL_PRICE}</Price>
+          <Actions>
+            <Button $variant="primary">
+              See details
+            </Button>
+            <Button $variant="secondary">
+              Edit delivery
+            </Button>
+          </Actions>
+        </Content>
+      </Card>
+      {freeGift && <FreeGiftBadge>Free gift</FreeGiftBadge>}
+    </CardWrapper>
   );
 }
