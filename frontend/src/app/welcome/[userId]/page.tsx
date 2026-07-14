@@ -1,5 +1,5 @@
-import { Wrapper } from "@/components/WelcomeCard/styled";
-import { Delivery } from "./Delivery";
+import { Wrapper } from "@/components/NextDeliveryCard/styled";
+import { NextDelivery } from "./NextDelivery";
 
 export default async function WelcomePage(
   props: PageProps<"/welcome/[userId]">,
@@ -8,7 +8,7 @@ export default async function WelcomePage(
 
   return (
     <Wrapper>
-      <Delivery userId={userId} />
+      <NextDelivery userId={userId} />
     </Wrapper>
   );
 }

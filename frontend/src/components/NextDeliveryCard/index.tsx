@@ -23,7 +23,7 @@ type Props = {
 
 const CAT_IMAGE_URL = "https://cataas.com/cat";
 
-export function WelcomeCard({
+export function NextDeliveryCard({
   title,
   message,
   totalPrice,
