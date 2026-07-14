@@ -107,16 +107,16 @@ export const Button = styled.button<{ $variant: "primary" | "secondary" }>`
   letter-spacing: 0.025em;
   cursor: pointer;
   border: 0.0625rem solid transparent;
-  background: ${(props) =>
-    props.$variant === "primary" ? colors.primary : colors.surface};
-  color: ${(props) =>
-    props.$variant === "primary" ? colors.surface : colors.primary};
-  border-color: ${(props) =>
-    props.$variant === "primary" ? "transparent" : colors.primary};
+  background: ${(p) =>
+    p.$variant === "primary" ? colors.primary : colors.surface};
+  color: ${(p) =>
+    p.$variant === "primary" ? colors.surface : colors.primary};
+  border-color: ${(p) =>
+    p.$variant === "primary" ? "transparent" : colors.primary};
 
   &:hover {
-    background: ${(props) =>
-      props.$variant === "primary" ? colors.primaryDark : colors.primaryLight};
+    background: ${(p) =>
+      p.$variant === "primary" ? colors.primaryDark : colors.primaryLight};
   }
 
   @media (min-width: ${TABLET_BREAKPOINT}) {
