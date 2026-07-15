@@ -17,6 +17,13 @@ export class CommsService {
     }
 
     const activeCats = customer.cats.filter((cat) => cat.subscriptionActive);
+
+    if (activeCats.length === 0) {
+      throw new NotFoundException(
+        `No active subscriptions for customer with id ${userId}`,
+      );
+    }
+
     const totalPrice = calculateTotalPrice(activeCats);
 
     const formattedCatNames = new Intl.ListFormat('en-GB', {

@@ -10,9 +10,10 @@ export const POUCH_SIZE_PRICES: Record<PouchSize, number> = {
 };
 
 export function calculateTotalPrice(cats: Cat[]): number {
-  const total = cats
-    .filter((cat) => cat.subscriptionActive)
-    .reduce((sum, cat) => sum + POUCH_SIZE_PRICES[cat.pouchSize], 0);
+  const total = cats.reduce(
+    (sum, cat) => sum + POUCH_SIZE_PRICES[cat.pouchSize],
+    0,
+  );
 
   return Math.round(total * 100) / 100;
 }

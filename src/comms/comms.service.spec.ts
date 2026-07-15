@@ -67,4 +67,18 @@ describe('CommsService', () => {
       NotFoundException,
     );
   });
+
+  it('throws NotFoundException when the customer has no active subscriptions', () => {
+    customersService.findById.mockReturnValue({
+      ...customer,
+      cats: customer.cats.map((cat) => ({
+        ...cat,
+        subscriptionActive: false,
+      })),
+    });
+
+    expect(() => service.getNextDelivery(customer.id)).toThrow(
+      NotFoundException,
+    );
+  });
 });
