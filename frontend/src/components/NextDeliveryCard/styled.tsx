@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors, TABLET_BREAKPOINT } from "@/styles/theme";
+import styled from 'styled-components';
+import { colors, TABLET_BREAKPOINT } from '@/styles/theme';
 
 export const Wrapper = styled.main`
   display: flex;
@@ -99,7 +99,7 @@ export const Actions = styled.div`
   }
 `;
 
-export const Button = styled.button<{ $variant: "primary" | "secondary" }>`
+export const Button = styled.button<{ $variant: 'primary' | 'secondary' }>`
   flex: 1;
   border-radius: 0.25rem;
   padding: 0.625rem 1rem;
@@ -108,15 +108,14 @@ export const Button = styled.button<{ $variant: "primary" | "secondary" }>`
   cursor: pointer;
   border: 0.0625rem solid transparent;
   background: ${(p) =>
-    p.$variant === "primary" ? colors.primary : colors.surface};
-  color: ${(p) =>
-    p.$variant === "primary" ? colors.surface : colors.primary};
+    p.$variant === 'primary' ? colors.primary : colors.surface};
+  color: ${(p) => (p.$variant === 'primary' ? colors.surface : colors.primary)};
   border-color: ${(p) =>
-    p.$variant === "primary" ? "transparent" : colors.primary};
+    p.$variant === 'primary' ? 'transparent' : colors.primary};
 
   &:hover {
     background: ${(p) =>
-      p.$variant === "primary" ? colors.primaryDark : colors.primaryLight};
+      p.$variant === 'primary' ? colors.primaryDark : colors.primaryLight};
   }
 
   @media (min-width: ${TABLET_BREAKPOINT}) {

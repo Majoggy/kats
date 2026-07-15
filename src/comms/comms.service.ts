@@ -22,8 +22,8 @@ export class CommsService {
     const formattedCatNames = new Intl.ListFormat('en-GB', {
       style: 'long',
       type: 'conjunction',
-    }).format(activeCats.map((cat) => cat.name));   
-    
+    }).format(activeCats.map((cat) => cat.name));
+
     return {
       title: `Your next delivery for ${formattedCatNames}`,
       message: `Hey ${customer.firstName}! In two days' time, we'll be charging you for your next order for ${formattedCatNames}'s fresh food.`,

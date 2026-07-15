@@ -1,5 +1,5 @@
-import { GenericCard } from "@/components/GenericCard";
-import { Title } from "./Title";
+import { GenericCard } from '@/components/GenericCard';
+import { Title } from './Title';
 
 export function ErrorState() {
   return (

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Actions,
@@ -12,7 +12,7 @@ import {
   MobileImage,
   Price,
   Title,
-} from "./styled";
+} from './styled';
 
 type Props = {
   title: string;
@@ -21,7 +21,7 @@ type Props = {
   freeGift: boolean;
 };
 
-const CAT_IMAGE_URL = "https://cataas.com/cat";
+const CAT_IMAGE_URL = 'https://cataas.com/cat';
 
 export function NextDeliveryCard({
   title,
@@ -29,7 +29,6 @@ export function NextDeliveryCard({
   totalPrice,
   freeGift,
 }: Props) {
-  
   const TOTAL_PRICE = `£${totalPrice.toFixed(2)}`;
 
   return (
@@ -42,12 +41,8 @@ export function NextDeliveryCard({
           <Message>{message}</Message>
           <Price>Total price: {TOTAL_PRICE}</Price>
           <Actions>
-            <Button $variant="primary">
-              See details
-            </Button>
-            <Button $variant="secondary">
-              Edit delivery
-            </Button>
+            <Button $variant="primary">See details</Button>
+            <Button $variant="secondary">Edit delivery</Button>
           </Actions>
         </Content>
       </Card>

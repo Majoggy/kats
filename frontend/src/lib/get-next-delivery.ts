@@ -10,7 +10,7 @@ export async function getNextDelivery(
 ): Promise<NextDeliveryResponse | null> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/comms/your-next-delivery/${encodeURIComponent(userId)}`,
-    { cache: "no-store" },
+    { cache: 'no-store' },
   );
 
   if (res.status === 404) {

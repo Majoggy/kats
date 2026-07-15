@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "@/styles/theme";
+import styled from 'styled-components';
+import { colors } from '@/styles/theme';
 
 export const GenericCard = styled.div`
   border-radius: 0.25rem;
@@ -7,4 +7,3 @@ export const GenericCard = styled.div`
   background: ${colors.surface};
   padding: 1.5rem;
 `;
-
